@@ -3,3 +3,6 @@ pandas
 openai
 gunicorn
 openpyxl
+
+python-dotenv
+groq
