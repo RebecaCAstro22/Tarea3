@@ -2,7 +2,15 @@ import os
 import pandas as pd
 from flask import Flask, request, jsonify, render_template
 from openai import OpenAI
+from dotenv import load_dotenv
+from groq import Groq
 
+load_dotenv()
+api_key = os.getenv("GROQ_API_KEY")
+
+client = Groq(
+    api_key=api_key,
+)
 app = Flask(__name__)
 # Leer Excel
 # Agrega esto antes de leer el excel:
